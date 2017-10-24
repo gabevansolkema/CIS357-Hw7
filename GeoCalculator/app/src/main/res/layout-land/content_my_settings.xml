@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="cis.gvsu.edu.geocalculator.MySettingsActivity"
     tools:showIn="@layout/activity_my_settings">
 
@@ -17,14 +17,14 @@
         android:id="@+id/left_half"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1" >
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
             android:text="Distance Units"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -33,23 +33,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp" />
-
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/right_half"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1" >
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="0dp"
             android:text="Bearing Units"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -59,7 +57,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/textView4"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="0dp" />
+
     </RelativeLayout>
 
 </LinearLayout>
